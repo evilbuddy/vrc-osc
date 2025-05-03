@@ -1,0 +1,4 @@
+{time_HH}:{time_mm} ({time_zone})
+[{window_initial_title}]
+{cpu_percent}% ({cpu_curfreq} GHz) / {gpu_percent}%
+{ram_used}GiB / {ram_total}GiB
