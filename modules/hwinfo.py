@@ -46,7 +46,7 @@ def gpu(text):
     gpu = GPUtil.getGPUs()[0]
     return vrcosc.str_replace_bulk(text, {
         "gpu_model": gpu.name,
-        "gpu_percent": gpu.load,
+        "gpu_percent": round(gpu.load * 100, 1),
         "vram_total": gpu.memoryTotal,
         "vram_free": gpu.memoryFree,
         "vram_used": gpu.memoryUsed,
