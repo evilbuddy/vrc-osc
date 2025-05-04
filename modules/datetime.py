@@ -43,5 +43,5 @@ def format(text):
         "time_s": now.strftime("%S"),
 
         "time_ap": now.strftime("%p"),
-        "time_zone": now.strftime("%Z")
+        "time_zone": now.astimezone().tzname()
     })
