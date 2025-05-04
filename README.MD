@@ -16,7 +16,8 @@ Yet another OSC program, but now in Python !
     - All the modules should contain info about the keys they replace !
 4. Install the dependencies (using `pip` or your Linux distro's package manager !)
     - python-osc
-5. Run `main.py` (python`main.py`)
+5. Run `main.py` (`python main.py`)
+    - See `main.py --help` for the command-line arguments
 
 # How to write modules ?
 Each module is a Python file in the `modules/` folder.
