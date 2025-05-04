@@ -14,7 +14,7 @@ Yet another OSC program, but now in Python !
         This will import `hwinfo.py` and `hyprland.py` from the modules folder
 3. Change the `text.txt` to what you want the chatbox to be
     - All the modules should contain info about the keys they replace !
-4. Install the dependencies (using `pip` or your Linux distro's package manager !)
+4. Install the dependencies (using `pip` or your distro's package manager !)
     - python-osc
 5. Run `main.py` (`python main.py`)
     - See `main.py --help` for the command-line arguments
