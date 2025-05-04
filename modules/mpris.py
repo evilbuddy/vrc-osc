@@ -9,7 +9,12 @@
 #   {media_artist}          The artist of the currently playing media
 #   {media_length}          The length of the currently playing media
 #   {media_album}           The album of the currently playing media
+#
+#   {media_n}               A linebreak character that only appears if the media player is playing
 #   {media_dash}            A dash character that only appears if the media player is playing
+#   {media_space}           A space character that only appears if the media player is playing
+#   {media_lparen}          A left parenthesis character that only appears if the media player is playing
+#   {media_rparen}          A right parenthesis character that only appears if the media player is playing
 
 import dbus
 import vrcosc
@@ -46,6 +51,9 @@ def format(text):
         artist = metadata.get("xesam:artist", ["Unknown"])[0]
         album = metadata.get("xesam:album", "Unknown")
         length = round(metadata.get("mpris:length", 0) / 1000000)
+
+    if length <= 0:
+        length = ""
     
     return vrcosc.str_replace_bulk(text, {
         "media_player": player,
@@ -53,5 +61,9 @@ def format(text):
         "media_artist": artist,
         "media_length": str(length),
         "media_album": album,
-        "media_dash": " - " if player else ""
+        "media_n": "\n" if player else "",
+        "media_dash": " - " if player else "",
+        "media_space": " " if player else "",
+        "media_lparen": "(" if player else "",
+        "media_rparen": ")" if player else ""
     })
