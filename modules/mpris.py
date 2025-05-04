@@ -9,6 +9,7 @@
 #   {media_artist}          The artist of the currently playing media
 #   {media_length}          The length of the currently playing media
 #   {media_album}           The album of the currently playing media
+#   {media_dash}            A dash character that only appears if the media player is playing
 
 import dbus
 import vrcosc
@@ -51,5 +52,6 @@ def format(text):
         "media_title": title,
         "media_artist": artist,
         "media_length": str(length),
-        "media_album": album
+        "media_album": album,
+        "media_dash": " - " if player else ""
     })
