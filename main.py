@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
         for module in modules:
             text = module.format(text)
-            time.sleep(args.sleep / 1000)
 
         client.send_message(args.path, [text, True])
+        time.sleep(args.sleep / 1000)
 

@@ -2,3 +2,4 @@
 [{window_initial_title}]
 {cpu_percent}% ({cpu_curfreq} GHz) / {gpu_percent}%
 {ram_used}GiB / {ram_total}GiB
+{media_artist} - {media_title} ({media_length})

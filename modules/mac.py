@@ -19,5 +19,6 @@ return frontApp
 
     app_name = subprocess.check_output(['osascript', '-e', script]).strip()
     return vrcosc.str_replace_bulk(text, {
-        "window_class": app_name.decode()
+        "window_class": app_name.decode(),
+        "window_title": app_name.decode()
     })
